@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="stylesheet" href="quiz.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: gray;
+        }
+
+        .container2 {
+            margin-left: 20px;
+        }
+
+        .container {
+            margin-left: 500px;
+            border-radius: 40px;
+            font-weight: bolder;
+            margin-top: 100px;
+            border: 2px solid black;
+            width: 350px;
+            background-color: black;
+        }
+
+        label {
+            color: white;
+        }
+
+        .container3 {
+            margin-top: 30px;
+        }
+
+        select {
+            width: 300px;
+            height: 40px;
+            font-weight: bold;
+            border-radius: 9px;
+            margin-top: 10px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            background-color: black;
+            color: khaki;
+
+            /* background: -webkit-linear-gradient(90deg, gold, white); */
+            /* -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+             */
+
+
+        }
+
+        h1 {font-family:Georgia, 'Times New Roman', Times, serif;
+            margin-left: 50px;
+            margin-bottom: 55px;
+            margin-top: 40px;
+            color: rgb(252, 193, 46);
+            background: -webkit-linear-gradient(90deg, gold, white);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-size: 42px;
+        }
+
+        .start {
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            margin-top: 30px;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 55px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: black;
+            font-weight: bolder;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            /* -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;border: 3px solid rgb(252, 193, 46);} */
+            cursor: pointer;
+        }
+        .first{
+            margin-left: 500px;
+            border-radius: 40px;
+            font-weight: bolder;
+            margin-top: 100px;
+            border: 2px solid black;
+            width: 350px;
+            background-color: black;
+        }
+        .next{
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            margin-top: 60px;
+            width: 150px;
+            height: 36px;
+            border-radius: 20px;
+            margin-left: 90px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: black;
+            font-weight: bolder;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            /* -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;border: 3px solid rgb(252, 193, 46);} */
+            cursor: pointer;
+        }
+       
+
+li {list-style: none;padding-top: 10px;padding-left: 7px;
+    text-align: left;
+            width: 300px;
+            height: 45px;
+            font-weight: bold;
+            border-radius: 9px;
+            margin-top: 30px;
+            margin-left: 10px;
+            /* margin-bottom: 10px; */
+            font-size: 15px;
+            background-color: black;
+            color: white;
+        border: 1px solid white;}
+        .timer{width: 280px;
+        height: 20px;background: -webkit-linear-gradient(90deg, gold, pink);
+        margin-top: 40px;
+        border-radius: 50px;
+        margin-left: 30px;
+    }
+    .question1{color: white;
+    font-size: 25px; margin-top: 60px;margin-left: 30px;}
+    p{color: khaki;margin-top: 40px;margin-left: 30px;margin-bottom: 20px;}
+    .both{display: flex;}
+    input{margin-top: 20px;margin-left: 10px;}
+    input[type="radio"]{accent-color: pink; width: 15px;}
+
+    input[type="radio"]:checked + li {background: -webkit-linear-gradient(90deg,gold ,pink); color:black;}
+button:active{background-color: maroon;}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container2">
+            <h1>Quiz App</h1>
+            <div class="container3">
+
+                <label for="ques">Number of Questions</label><br>
+                <select name="" id="ques">
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                    <option value="10">10</option>
+                </select>
+                <br>
+                <label for="cate">Select Category</label><br>
+                <select name="" id="cate">
+                    <option value="">Any Category</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="ts">TypeScript</option>
+                </select>
+                <br>
+
+                <label for="diff">Select Difficulty</label><br>
+                <select name="" id="diff">
+                    <option value="">Any Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <br>
+                <label for="time">Select Time Per Question</label><br>
+                <select name="" id="time">
+                    <option value="15">15 seconds</option>
+                    <option value="20">20 seconds</option>
+                    <option value="25">25 seconds</option>
+                </select>
+            </div>
+            <button class="start" > Start Quiz</button>
+
+
+
+        </div>
+    </div>
+
+<div class="first">
+<div class="firstmain">
+<div class="timer"></div>
+<div class="question1">Question 1</div>
+<p>What does HTML stand for?</p>
+<div class="both">
+<input type="radio" name="options" value="1" id="blue"> 
+<li id="one">Hyper link and text markup language</li></div>
+<div class="both">
+<input type="radio" name="options" value="2" id="bluee">
+<li id="two">Home toool markup language</li></div>
+<div class="both"><input type="radio" name="options" value="3" id="blueee">
+<li id="three">Hyper text markup language</li></div>
+
+<button class="next" onclick="next()">Next</button>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
