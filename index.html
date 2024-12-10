@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: url(go.jpg) no-repeat center center/cover;
+
+
+        }
+
+        #main {
+            position: absolute;
+            top: 250px;
+            left: 500px;
+            display: none;
+            color: khaki;
+
+
+        }
+
+        p {
+            color: khaki;
+            font-size: 18px;
+            line-height: 30px;
+            margin-left: 65px;
+            margin-bottom: 40px;
+
+            width: 300px;
+        }
+
+        /* input{margin-top: 40px; */
+
+        label {
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 9px;
+            font-size: 15px;
+            background-color: black;
+            color: white;
+
+            cursor: pointer;
+
+            border: 1px solid white;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-left: 65px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            accent-color: pink;
+            width: 15px;
+        }
+
+        input[type="radio"]:checked+label {
+            background: -webkit-linear-gradient(90deg, gold, pink);
+            color: black;
+        }
+
+        .card {
+            font-size: 35px;
+        }
+
+        .timer {
+            position: relative;
+            color: khaki;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            border-radius: 50%;
+            width: 45px;
+            height: 40px;
+            border: 2px solid gold;
+            padding-right: 10px;
+            padding-top: 5px;
+
+            bottom: 66px;
+            font-size: 25px;
+            margin-left: 180px;
+            left: 50px;
+        }
+
+        .tt {
+            position: absolute;
+            bottom: 480px;
+            width: 200px;
+            right: 0;
+            left: 70px;
+            height: 10px;
+            background: -webkit-linear-gradient(90deg, gold, pink);
+            margin-top: 40px;
+            border-radius: 20px;
+            margin-left: 0px;
+            color: khaki;
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: right;
+        }
+
+
+        .card {
+            position: absolute;
+            font-size: 35px;
+            line-height: 90px;
+            border-radius: 20px;
+
+            margin-left: 90px;
+
+            bottom: 6px;
+
+
+            color: black;
+            font-weight: bolder;
+            width: 240px;
+
+            background: -webkit-linear-gradient(90deg, gold, white);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            text-align: center;
+
+        }
+
+        #main1 {
+            box-shadow: 50px 50px 90px khaki;
+            font-family:
+                dancing script;
+            color: khaki;
+            margin-left: 550px;
+            border-radius: 40px;
+            font-weight: bolder;
+            margin-top: 100px;
+            border: 2px solid black;
+            width: 330px;
+            background-color: black;
+            height: 550px;
+
+        }
+
+        h2 {
+            color: white;
+            font-size: 20px;
+            margin-left: 110px;
+
+            margin-top: 50px;
+        }
+
+        h4 {
+            margin-left: 120px;
+            margin-top: 30px;
+            font-size: 24px;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .sab {
+            font-size: 25px;
+            margin-top: 55px;
+            margin-left: 50px;
+        }
+
+        #start {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 100px;
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 60px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: black;
+            font-weight: bolder;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            /* -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;border: 3px solid rgb(252, 193, 46);} */
+            cursor: pointer;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-left: 80px;
+
+            margin-top: 40px;
+            color: rgb(252, 193, 46);
+            background: -webkit-linear-gradient(90deg, gold, white);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-size: 35px;
+        }
+
+        #next {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 30px;
+            width: 150px;
+            height: 36px;
+            border-radius: 20px;
+            margin-left: 140px;
+            margin-bottom: 60px;
+            font-size: 20px;
+            color: black;
+            font-weight: bolder;
+            background: -webkit-linear-gradient(90deg, gold, white);
+            /* -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;border: 3px solid rgb(252, 193, 46);} */
+            cursor: pointer;
+        }
+
+        label:hover {
+            background: -webkit-linear-gradient(90deg, gold, pink);
+            color: black;
+        }
+
+        #next:hover {
+            background: pink;
+            color: black;
+            ;
+        }
+
+        #start:hover {
+            background: pink;
+            color: black;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main1">
+        <h1 id="sab">Quiz App</h1>
+        <h2> created by</h2>
+        <h1 class="sab">SABIHA SULTANA</h1>
+        
+
+        <button id="start" onclick="next()">Start Quiz </button>
+
+
+    </div>
+    <div id="main">
+
+        <p id="ques"></p>
+
+        <div id="inputs">
+            <input type="radio" name="options" value="1">
+            <label id="opt1"></label>
+            <br> <br>
+            <input type="radio" name="options" value="2">
+            <label id="opt2"></label>
+            <br> <br>
+            <input type="radio" name="options" value="3">
+            <label id="opt3"></label>
+        </div>
+        <br> <br>
+        <div class="card"></div>
+        <div id="footer">
+            <button onclick="next()" id="next">Next</button>
+            <div class="tt">
+                <h2 class="timer">60</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
